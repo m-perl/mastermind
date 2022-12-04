@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  border: solid 0.5px black;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 20px -10px black;
+  box-shadow: 0 0 20px -10px black;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.container .board {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  -webkit-box-shadow: 0 0 20px -10px black;
+  box-shadow: 0 0 20px -10px black;
+  border-radius: 40px;
+}
+
+.container .board .round {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 10%;
+}
+
+.container .board .round .guess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container .board .round .guess .place {
+  width: 45px;
+  height: 45px;
+  border: solid 1px grey;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.container .board .round .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .board .round .status .placement {
+  width: 20px;
+  height: 20px;
+  border: solid 1px grey;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.g-btn {
+  display: none;
+}
+
+#roundOneBtn {
+  display: block;
+}
+
+.colors {
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.pick {
+  width: 30px;
+  height: 30px;
+  border: solid 1px black;
+  border-radius: 20px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.colors {
+  display: none;
+}
+
+#hello {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

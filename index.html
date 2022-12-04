@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Mastermind</h1>
+    </header>
+
+    <div id="colors" class="colors">
+      <div id="pick1" class="pick red"></div>
+      <div id="pick2" class="pick blue"></div>
+      <div id="pick3" class="pick yellow"></div>
+      <div id="pick4" class="pick grey"></div>
+      <div id="pick5" class="pick orange"></div>
+    </div>
+
+    <div class="container">
+      <div class="board">
+        <!--round one-->
+        <div class="round r-1">
+          <div class="guess">
+            <div id="roundOne/placeOne" class="place"></div>
+            <div id="roundOne/placeTwo" class="place"></div>
+            <div id="roundOne/placeThree" class="place"></div>
+            <div id="roundOne/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundOneBtn" class="g-btn">Guess</button>
+        </div>
+
+        <!--round two-->
+        <div class="round r-2">
+          <div class="guess">
+            <div id="roundTwo/placeOne" class="place"></div>
+            <div id="roundTwo/placeTwo" class="place"></div>
+            <div id="roundTwo/placeThree" class="place"></div>
+            <div id="roundTwo/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundTwoBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round three-->
+        <div class="round r-3">
+          <div class="guess">
+            <div id="roundThree/placeOne" class="place"></div>
+            <div id="roundThree/placeTwo" class="place"></div>
+            <div id="roundThree/placeThree" class="place"></div>
+            <div id="roundThree/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundThreeBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round four-->
+        <div class="round r-4">
+          <div class="guess">
+            <div id="roundFour/placeOne" class="place"></div>
+            <div id="roundFour/placeTwo" class="place"></div>
+            <div id="roundFour/placeThree" class="place"></div>
+            <div id="roundFour/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundFourBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round five-->
+        <div class="round r-5">
+          <div class="guess">
+            <div id="roundFive/placeOne" class="place"></div>
+            <div id="roundFive/placeTwo" class="place"></div>
+            <div id="roundFive/placeThree" class="place"></div>
+            <div id="roundFive/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundFiveBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round six-->
+        <div class="round r-6">
+          <div class="guess">
+            <div id="roundSix/placeOne" class="place"></div>
+            <div id="roundSix/placeTwo" class="place"></div>
+            <div id="roundSix/placeThree" class="place"></div>
+            <div id="roundSix/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundSixBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round seven-->
+        <div class="round r-7">
+          <div class="guess">
+            <div id="roundSeven/placeOne" class="place"></div>
+            <div id="roundSeven/placeTwo" class="place"></div>
+            <div id="roundSeven/placeThree" class="place"></div>
+            <div id="roundSeven/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundSevenBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round eight-->
+        <div class="round r-8">
+          <div class="guess">
+            <div id="roundEight/placeOne" class="place"></div>
+            <div id="roundEight/placeTwo" class="place"></div>
+            <div id="roundEight/placeThree" class="place"></div>
+            <div id="roundEight/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundEightBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round nine-->
+        <div class="round r-9">
+          <div class="guess">
+            <div id="roundNine/placeOne" class="place"></div>
+            <div id="roundNine/placeTwo" class="place"></div>
+            <div id="roundNine/placeThree" class="place"></div>
+            <div id="roundNine/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundNineBtn" class="g-btn">Play</button>
+        </div>
+
+        <!--round ten-->
+        <div class="round r-10">
+          <div class="guess">
+            <div id="roundTen/placeOne" class="place"></div>
+            <div id="roundTen/placeTwo" class="place"></div>
+            <div id="roundTen/placeThree" class="place"></div>
+            <div id="roundTen/placeFour" class="place"></div>
+          </div>
+          <div class="status">
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+            <div class="placement"></div>
+          </div>
+          <button id="roundTenBtn" class="g-btn">Play</button>
+        </div>
+      </div>
+    </div>
+    <div id="thisDiv">hello</div>
+    <script src="main.js"></script>
+    <footer class="footer"></footer>
+  </body>
+</html>
