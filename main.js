@@ -8,6 +8,18 @@ const yellow = document.getElementById('pick3');
 const grey = document.getElementById('pick4');
 const orange = document.getElementById('pick5');
 
+//btn
+oneBtn = document.getElementById('roundOneBtn');
+twoBtn = document.getElementById('roundTwoBtn');
+threeBtn = document.getElementById('roundThreeBtn');
+fourBtn = document.getElementById('roundFourBtn');
+fiveBtn = document.getElementById('roundFiveBtn');
+sixBtn = document.getElementById('roundSixBtn');
+sevenBtn = document.getElementById('roundSevenBtn');
+eightBtn = document.getElementById('roundEightBtn');
+nineBtn = document.getElementById('roundNineBtn');
+tenBtn = document.getElementById('roundTenBtn');
+
 ///places
 //round One
 const roundOnePlaceOne = document.getElementById('roundOne/placeOne');
@@ -148,175 +160,218 @@ roundOnePlaceFour.onclick = () => {
   };
 };
 
-//round two
-//round two place one
-roundTwoPlaceOne.onclick = () => {
-  roundTwoPlaceOne.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+//guess btn function
+oneBtn.onclick = () => {
+  oneBtn.style = 'display: none';
+  twoBtn.style = 'display: block';
 
-  red.onclick = () => {
-    roundTwoPlaceOne.style = 'background-color: red';
-  };
-  blue.onclick = () => {
-    roundTwoPlaceOne.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundTwoPlaceOne.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundTwoPlaceOne.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundTwoPlaceOne.style = 'background-color: orange';
-  };
-};
-//round two place two
-roundTwoPlaceTwo.onclick = () => {
-  roundTwoPlaceTwo.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+  //round two
+  //round two place one
+  roundTwoPlaceOne.onclick = () => {
+    roundTwoPlaceOne.style = 'border: solid 3px darkslategrey';
+    colors.style = 'display: flex';
 
-  red.onclick = () => {
-    roundTwoPlaceTwo.style = 'background-color: red';
+    red.onclick = () => {
+      roundTwoPlaceOne.style = 'background-color: red';
+    };
+    blue.onclick = () => {
+      roundTwoPlaceOne.style = 'background-color: blue';
+    };
+    yellow.onclick = () => {
+      roundTwoPlaceOne.style = 'background-color: yellow';
+    };
+    grey.onclick = () => {
+      roundTwoPlaceOne.style = 'background-color: grey';
+    };
+    orange.onclick = () => {
+      roundTwoPlaceOne.style = 'background-color: orange';
+    };
   };
-  blue.onclick = () => {
-    roundTwoPlaceTwo.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundTwoPlaceTwo.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundTwoPlaceTwo.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundTwoPlaceTwo.style = 'background-color: orange';
-  };
-};
-//round two place three
-roundTwoPlaceThree.onclick = () => {
-  roundTwoPlaceThree.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+  //round two place two
+  roundTwoPlaceTwo.onclick = () => {
+    roundTwoPlaceTwo.style = 'border: solid 3px darkslategrey';
+    colors.style = 'display: flex';
 
-  red.onclick = () => {
-    roundTwoPlaceThree.style = 'background-color: red';
+    red.onclick = () => {
+      roundTwoPlaceTwo.style = 'background-color: red';
+    };
+    blue.onclick = () => {
+      roundTwoPlaceTwo.style = 'background-color: blue';
+    };
+    yellow.onclick = () => {
+      roundTwoPlaceTwo.style = 'background-color: yellow';
+    };
+    grey.onclick = () => {
+      roundTwoPlaceTwo.style = 'background-color: grey';
+    };
+    orange.onclick = () => {
+      roundTwoPlaceTwo.style = 'background-color: orange';
+    };
   };
-  blue.onclick = () => {
-    roundTwoPlaceThree.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundTwoPlaceThree.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundTwoPlaceThree.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundTwoPlaceThree.style = 'background-color: orange';
-  };
-};
-//round two place four
-roundTwoPlaceFour.onclick = () => {
-  roundTwoPlaceFour.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+  //round two place three
+  roundTwoPlaceThree.onclick = () => {
+    roundTwoPlaceThree.style = 'border: solid 3px darkslategrey';
+    colors.style = 'display: flex';
 
-  red.onclick = () => {
-    roundTwoPlaceFour.style = 'background-color: red';
+    red.onclick = () => {
+      roundTwoPlaceThree.style = 'background-color: red';
+    };
+    blue.onclick = () => {
+      roundTwoPlaceThree.style = 'background-color: blue';
+    };
+    yellow.onclick = () => {
+      roundTwoPlaceThree.style = 'background-color: yellow';
+    };
+    grey.onclick = () => {
+      roundTwoPlaceThree.style = 'background-color: grey';
+    };
+    orange.onclick = () => {
+      roundTwoPlaceThree.style = 'background-color: orange';
+    };
   };
-  blue.onclick = () => {
-    roundTwoPlaceFour.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundTwoPlaceFour.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundTwoPlaceFour.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundTwoPlaceFour.style = 'background-color: orange';
-  };
-};
+  //round two place four
+  roundTwoPlaceFour.onclick = () => {
+    roundTwoPlaceFour.style = 'border: solid 3px darkslategrey';
+    colors.style = 'display: flex';
 
-//round three
-//round three place one
-roundThreePlaceOne.onclick = () => {
-  roundThreePlaceOne.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+    red.onclick = () => {
+      roundTwoPlaceFour.style = 'background-color: red';
+    };
+    blue.onclick = () => {
+      roundTwoPlaceFour.style = 'background-color: blue';
+    };
+    yellow.onclick = () => {
+      roundTwoPlaceFour.style = 'background-color: yellow';
+    };
+    grey.onclick = () => {
+      roundTwoPlaceFour.style = 'background-color: grey';
+    };
+    orange.onclick = () => {
+      roundTwoPlaceFour.style = 'background-color: orange';
+    };
+  };
 
-  red.onclick = () => {
-    roundThreePlaceOne.style = 'background-color: red';
-  };
-  blue.onclick = () => {
-    roundThreePlaceOne.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundThreePlaceOne.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundThreePlaceOne.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundThreePlaceOne.style = 'background-color: orange';
-  };
-};
-//round three place two
-roundThreePlaceTwo.onclick = () => {
-  roundThreePlaceTwo.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+  twoBtn.onclick = () => {
+    twoBtn.style = 'display: none';
+    threeBtn.style = 'display: block';
 
-  red.onclick = () => {
-    roundThreePlaceTwo.style = 'background-color: red';
-  };
-  blue.onclick = () => {
-    roundThreePlaceTwo.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundThreePlaceTwo.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundThreePlaceTwo.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundThreePlaceTwo.style = 'background-color: orange';
-  };
-};
-//round three place three
-roundThreePlaceThree.onclick = () => {
-  roundThreePlaceThree.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+    //round three
+    //round three place one
+    roundThreePlaceOne.onclick = () => {
+      roundThreePlaceOne.style = 'border: solid 3px darkslategrey';
+      colors.style = 'display: flex';
 
-  red.onclick = () => {
-    roundThreePlaceThree.style = 'background-color: red';
-  };
-  blue.onclick = () => {
-    roundThreePlaceThree.style = 'background-color: blue';
-  };
-  yellow.onclick = () => {
-    roundThreePlaceThree.style = 'background-color: yellow';
-  };
-  grey.onclick = () => {
-    roundThreePlaceThree.style = 'background-color: grey';
-  };
-  orange.onclick = () => {
-    roundThreePlaceThree.style = 'background-color: orange';
-  };
-};
-//round three place four
-roundThreePlaceFour.onclick = () => {
-  roundThreePlaceFour.style = 'border: solid 3px darkslategrey';
-  colors.style = 'display: flex';
+      red.onclick = () => {
+        roundThreePlaceOne.style = 'background-color: red';
+      };
+      blue.onclick = () => {
+        roundThreePlaceOne.style = 'background-color: blue';
+      };
+      yellow.onclick = () => {
+        roundThreePlaceOne.style = 'background-color: yellow';
+      };
+      grey.onclick = () => {
+        roundThreePlaceOne.style = 'background-color: grey';
+      };
+      orange.onclick = () => {
+        roundThreePlaceOne.style = 'background-color: orange';
+      };
+    };
+    //round three place two
+    roundThreePlaceTwo.onclick = () => {
+      roundThreePlaceTwo.style = 'border: solid 3px darkslategrey';
+      colors.style = 'display: flex';
 
-  red.onclick = () => {
-    roundThreePlaceFour.style = 'background-color: red';
+      red.onclick = () => {
+        roundThreePlaceTwo.style = 'background-color: red';
+      };
+      blue.onclick = () => {
+        roundThreePlaceTwo.style = 'background-color: blue';
+      };
+      yellow.onclick = () => {
+        roundThreePlaceTwo.style = 'background-color: yellow';
+      };
+      grey.onclick = () => {
+        roundThreePlaceTwo.style = 'background-color: grey';
+      };
+      orange.onclick = () => {
+        roundThreePlaceTwo.style = 'background-color: orange';
+      };
+    };
+    //round three place three
+    roundThreePlaceThree.onclick = () => {
+      roundThreePlaceThree.style = 'border: solid 3px darkslategrey';
+      colors.style = 'display: flex';
+
+      red.onclick = () => {
+        roundThreePlaceThree.style = 'background-color: red';
+      };
+      blue.onclick = () => {
+        roundThreePlaceThree.style = 'background-color: blue';
+      };
+      yellow.onclick = () => {
+        roundThreePlaceThree.style = 'background-color: yellow';
+      };
+      grey.onclick = () => {
+        roundThreePlaceThree.style = 'background-color: grey';
+      };
+      orange.onclick = () => {
+        roundThreePlaceThree.style = 'background-color: orange';
+      };
+    };
+    //round three place four
+    roundThreePlaceFour.onclick = () => {
+      roundThreePlaceFour.style = 'border: solid 3px darkslategrey';
+      colors.style = 'display: flex';
+
+      red.onclick = () => {
+        roundThreePlaceFour.style = 'background-color: red';
+      };
+      blue.onclick = () => {
+        roundThreePlaceFour.style = 'background-color: blue';
+      };
+      yellow.onclick = () => {
+        roundThreePlaceFour.style = 'background-color: yellow';
+      };
+      grey.onclick = () => {
+        roundThreePlaceFour.style = 'background-color: grey';
+      };
+      orange.onclick = () => {
+        roundThreePlaceFour.style = 'background-color: orange';
+      };
+    };
   };
-  blue.onclick = () => {
-    roundThreePlaceFour.style = 'background-color: blue';
+
+  threeBtn.onclick = () => {
+    threeBtn.style = 'display: none';
+    fourBtn.style = 'display: block';
   };
-  yellow.onclick = () => {
-    roundThreePlaceFour.style = 'background-color: yellow';
+  fourBtn.onclick = () => {
+    fourBtn.style = 'display: none';
+    fiveBtn.style = 'display: block';
   };
-  grey.onclick = () => {
-    roundThreePlaceFour.style = 'background-color: grey';
+  fiveBtn.onclick = () => {
+    fiveBtn.style = 'display: none';
+    sixBtn.style = 'display: block';
   };
-  orange.onclick = () => {
-    roundThreePlaceFour.style = 'background-color: orange';
+  sixBtn.onclick = () => {
+    sixBtn.style = 'display: none';
+    sevenBtn.style = 'display: block';
+  };
+  sevenBtn.onclick = () => {
+    sevenBtn.style = 'display: none';
+    eightBtn.style = 'display: block';
+  };
+  eightBtn.onclick = () => {
+    eightBtn.style = 'display: none';
+    nineBtn.style = 'display: block';
+  };
+  nineBtn.onclick = () => {
+    nineBtn.style = 'display: none';
+    tenBtn.style = 'display: block';
+  };
+  tenBtn.onclick = () => {
+    //you won!!!!!
   };
 };
 
