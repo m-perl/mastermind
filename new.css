@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.g-btn {
+  display: none;
+  background-color: lightblue;
+  border: none;
+  padding: 2px 8px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.g-btn:hover {
+  background-color: rgba(173, 216, 230, 0.674);
+  transition: ease-in-out 0.2s;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(132, 132, 244);
+  color: darkblue;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.board {
+  margin-top: 10px;
+  background-color: rgb(132, 132, 244);
+  border-radius: 50px;
+  width: 60%;
+  padding: 10px;
+}
+.board .round {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.board .round .guess {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+.board .round .guess .place {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  margin: 0 5px;
+  background-color: rgb(237, 237, 237);
+}
+.board .round .status {
+  display: none;
+  grid-gap: 3px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.board .round .status .placement {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.colors {
+  width: 15%;
+  border: solid 1px grey;
+  border-radius: 50px;
+  background-color: rgb(132, 132, 244);
+}
+.colors .pick {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: solid 1px rgb(22, 22, 255);
+  margin: auto;
+  margin: 20px auto;
+}
+.colors .red {
+  background-color: red;
+}
+.colors .blue {
+  background-color: blue;
+}
+.colors .yellow {
+  background-color: yellow;
+}
+.colors .grey {
+  background-color: grey;
+}
+.colors .orange {
+  background-color: orange;
+}
+.colors .green {
+  background-color: lightgreen;
+}
+
+#roundOneBtn {
+  display: block;
+}
+
+.status {
+  display: none;
+}/*# sourceMappingURL=new.css.map */

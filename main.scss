@@ -21,11 +21,12 @@
   position: relative;
   height: 100vh;
   .board {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     position: absolute;
-    width: 80%;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+    position: absolute;
+    width: 70%;
     height: 90%;
     box-shadow: 0 0 20px -10px black;
     border-radius: 40px;
@@ -37,6 +38,7 @@
       .guess {
         display: flex;
         align-items: center;
+        border: solid 1px red;
         .place {
           width: 45px;
           height: 45px;

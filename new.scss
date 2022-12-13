@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.g-btn {
+  display: none;
+  background-color: lightblue;
+  border: none;
+  padding: 2px 8px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.g-btn:hover {
+  background-color: rgba(173, 216, 230, 0.674);
+  transition: ease-in-out 0.2s;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(132, 132, 244);
+  color: darkblue;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.board {
+  margin-top: 10px;
+  background-color: rgb(132, 132, 244);
+  border-radius: 50px;
+  width: 60%;
+  padding: 10px;
+  .round {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .guess {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px 0;
+      .place {
+        width: 45px;
+        height: 45px;
+        border-radius: 50px;
+        margin: 0 5px;
+        background-color: rgb(237, 237, 237);
+      }
+    }
+    .status {
+      display: none;
+      grid-gap: 3px;
+      grid-template-columns: repeat(2, 1fr);
+      .placement {
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.colors {
+  width: 15%;
+  border: solid 1px grey;
+  border-radius: 50px;
+  background-color: rgb(132, 132, 244);
+  .pick {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: solid 1px rgb(22, 22, 255);
+    margin: auto;
+    margin: 20px auto;
+  }
+  .red {
+    background-color: red;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .grey {
+    background-color: grey;
+  }
+  .orange {
+    background-color: orange;
+  }
+  .green {
+    background-color: lightgreen;
+  }
+}
+
+#roundOneBtn {
+  display: block;
+}
+
+.status {
+  display: none;
+}
