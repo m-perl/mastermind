@@ -583,7 +583,7 @@ threeBtn.onclick = () => {
 
     red.onclick = () => {
       roundFourPlaceThree.style = 'background-color: red';
-      guessFour[0] = 'red';
+      guessFour[2] = 'red';
     };
     blue.onclick = () => {
       roundFourPlaceThree.style = 'background-color: blue';
@@ -1063,10 +1063,8 @@ sixBtn.onclick = () => {
   }
 };
 
-
 //fix bugssss
 //place one has a bug
-
 //round seven
 sevenBtn.onclick = () => {
 
@@ -1181,7 +1179,7 @@ sevenBtn.onclick = () => {
   //place one
   if (guessSeven[0] === theCode[0]) {
     roundSevenScoreOne.style = 'background-color: black';
-  } else if (theCode.includes(guessFive[0])){
+  } else if (theCode.includes(guessSeven[0])){
     roundSevenScoreOne.style = 'background-color: red';
   }
   //place two
@@ -1216,13 +1214,11 @@ eightBtn.onclick = () => {
     };
     blue.onclick = () => {
       roundNinePlaceOne.style = 'background-color: blue';
-      guessEight[0] = 'blue';
-
+      guessNine[0] = 'blue';
     };
     yellow.onclick = () => {
       roundNinePlaceOne.style = 'background-color: yellow';
       guessNine[0] = 'yellow';
-
     };
     grey.onclick = () => {
       roundNinePlaceOne.style = 'background-color: grey';
@@ -1292,7 +1288,7 @@ eightBtn.onclick = () => {
       guessNine[3] = 'red';
     };
     blue.onclick = () => {
-      roundNinetPlaceFour.style = 'background-color: blue';
+      roundNinePlaceFour.style = 'background-color: blue';
       guessNine[3] = 'blue';
     };
     yellow.onclick = () => {

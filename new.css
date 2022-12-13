@@ -30,13 +30,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100vh;
 }
 
 .board {
   margin-top: 10px;
   background-color: rgb(132, 132, 244);
   border-radius: 50px;
-  width: 60%;
+  width: 280px;
   padding: 10px;
 }
 .board .round {
@@ -46,12 +47,11 @@
 }
 .board .round .guess {
   display: flex;
-  justify-content: space-evenly;
   padding: 10px 0;
 }
 .board .round .guess .place {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   border-radius: 50px;
   margin: 0 5px;
   background-color: rgb(237, 237, 237);
@@ -69,7 +69,8 @@
 }
 
 .colors {
-  width: 15%;
+  margin-top: 10px;
+  width: 70px;
   border: solid 1px grey;
   border-radius: 50px;
   background-color: rgb(132, 132, 244);
@@ -107,4 +108,13 @@
 
 .status {
   display: none;
+}
+
+footer {
+  text-align: center;
+  color: darkblue;
+  padding: 5px;
+}
+footer a {
+  color: black;
 }/*# sourceMappingURL=new.css.map */
