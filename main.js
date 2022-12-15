@@ -1,8 +1,16 @@
 ///variables;
 
 //the code
-//code  ////want to make automatic///
-const theCode = ['red', 'blue', 'yellow', 'grey'];
+
+let theCode = ['red', 'blue', 'yellow', 'grey', 'orange', 'green'];
+
+theCode.sort((a, b) => 0.5 - Math.random());
+
+theCode.pop() 
+
+theCode.pop()
+
+console.log(theCode);
 
 //colors
 const colors = document.getElementById('colors');
@@ -12,6 +20,7 @@ const blue = document.getElementById('pick2');
 const yellow = document.getElementById('pick3');
 const grey = document.getElementById('pick4');
 const orange = document.getElementById('pick5');
+const green = document.getElementById('pick6');
 
 //btn
 oneBtn = document.getElementById('roundOneBtn');
@@ -101,6 +110,18 @@ let guessEight = ['', '', '', ''];
 let guessNine = ['', '', '', ''];
 let guessTen = ['', '', '', ''];
 
+//the score arrays
+let scoreForRoundOne = ['', '', '', ''];
+let scoreForRoundTwo = ['', '', '', ''];
+let scoreForRoundThree = ['', '', '', ''];
+let scoreForRoundFour = ['', '', '', ''];
+let scoreForRoundFive = ['', '', '', ''];
+let scoreForRoundSix = ['', '', '', ''];
+let scoreForRoundSeven = ['', '', '', ''];
+let scoreForRoundEight = ['', '', '', ''];
+let scoreForRoundNine = ['', '', '', ''];
+let scoreForRoundTen = ['', '', '', ''];
+
 //score variables
 //round one
 const roundOneScoreOne = document.getElementById('scoreForRoundOnePlaceOne');
@@ -155,6 +176,7 @@ const roundTenScoreFour = document.getElementById('scoreForRoundTenPlaceFour');
 
 //round one
 document.getElementById('theBody').onload = () => {
+
   //place one
   roundOnePlaceOne.onclick = () => {
     roundOnePlaceOne.style = 'border: solid 3px darkslategrey';
@@ -177,6 +199,10 @@ document.getElementById('theBody').onload = () => {
     orange.onclick = () => {
       roundOnePlaceOne.style = 'background-color: orange';
       guessOne[0] = 'orange';
+    };
+    green.onclick = () => {
+      roundOnePlaceOne.style = 'background-color: lightgreen';
+      guessOne[0] = 'green';
     };
   };
   //place two
@@ -203,6 +229,10 @@ document.getElementById('theBody').onload = () => {
       roundOnePlaceTwo.style = 'background-color: orange';
       guessOne[1] = 'orange';
     };
+    green.onclick = () => {
+      roundOnePlaceTwo.style = 'background-color: lightgreen';
+      guessOne[1] = 'green';
+    };
   };
   //place three
   roundOnePlaceThree.onclick = () => {
@@ -227,6 +257,10 @@ document.getElementById('theBody').onload = () => {
     orange.onclick = () => {
       roundOnePlaceThree.style = 'background-color: orange';
       guessOne[2] = 'orange';
+    };
+    green.onclick = () => {
+      roundOnePlaceThree.style = 'background-color: lightgreen';
+      guessOne[2] = 'green';
     };
   };
   //place four
@@ -253,12 +287,17 @@ document.getElementById('theBody').onload = () => {
       roundOnePlaceFour.style = 'background-color: orange';
       guessOne[3] = 'orange';
     };
+    green.onclick = () => {
+      roundOnePlaceFour.style = 'background-color: lightgreen';
+      guessOne[3] = 'green';
+    };
   };
 }
 
-//round two //// round one
+//round two 
 oneBtn.onclick = () => {
-  //round two place one
+
+  //place one
   roundTwoPlaceOne.onclick = () => {
     roundTwoPlaceOne.style = 'border: solid 3px darkslategrey';
 
@@ -282,8 +321,12 @@ oneBtn.onclick = () => {
       roundTwoPlaceOne.style = 'background-color: orange';
       guessTwo[0] = 'orange'
     };
+    green.onclick = () => {
+      roundTwoPlaceOne.style = 'background-color: lightgreen';
+      guessTwo[0] = 'green'
+    };
   };
-  //round two place two
+  //place two
   roundTwoPlaceTwo.onclick = () => {
     roundTwoPlaceTwo.style = 'border: solid 3px darkslategrey';
 
@@ -307,8 +350,12 @@ oneBtn.onclick = () => {
       roundTwoPlaceTwo.style = 'background-color: orange';
       guessTwo[1] = 'orange'
     };
+    green.onclick = () => {
+      roundTwoPlaceTwo.style = 'background-color: lightgreen';
+      guessTwo[1] = 'green'
+    };
   };
-  //round two place three
+  //place three
   roundTwoPlaceThree.onclick = () => {
     roundTwoPlaceThree.style = 'border: solid 3px darkslategrey';
 
@@ -332,8 +379,12 @@ oneBtn.onclick = () => {
       roundTwoPlaceThree.style = 'background-color: orange'
       guessTwo[2] = 'orange'
     };
+    green.onclick = () => {
+      roundTwoPlaceThree.style = 'background-color: lightgreen'
+      guessTwo[2] = 'green'
+    };
   };
-  //round two place four
+  //place four
   roundTwoPlaceFour.onclick = () => {
     roundTwoPlaceFour.style = 'border: solid 3px darkslategrey';
 
@@ -355,7 +406,11 @@ oneBtn.onclick = () => {
     };
     orange.onclick = () => {
       roundTwoPlaceFour.style = 'background-color: orange';
-      guessTwo[3] = 'orange'
+      guessTwo[3] = 'orange';
+    };
+    green.onclick = () => {
+      roundTwoPlaceFour.style = 'background-color: lightgreen';
+      guessTwo[3] = 'green';
     };
   };
   
@@ -365,27 +420,61 @@ oneBtn.onclick = () => {
 
   //place one
   if (guessOne[0] === theCode[0]) {
-    roundOneScoreOne.style = 'background-color: black';
+    scoreForRoundOne[0] = 'black';
   } else if (theCode.includes(guessOne[0])){
-    roundOneScoreOne.style = 'background-color: red';
+    scoreForRoundOne[0] = 'red';
   }
   //place two
   if (guessOne[1] === theCode[1]) {
-    roundOneScoreTwo.style = 'background-color: black';
+    scoreForRoundOne[1] = 'black';
   } else if (theCode.includes(guessOne[1])){
-    roundOneScoreTwo.style = 'background-color: red';
+    scoreForRoundOne[1] = 'red';
   }
   //place three
   if (guessOne[2] === theCode[2]) {
-    roundOneScoreThree.style = 'background-color: black';
+    scoreForRoundOne[2] = 'black';
   } else if (theCode.includes(guessOne[2])){
-    roundOneScoreThree.style = 'background-color: red';
+    scoreForRoundOne[2] = 'red';
   }
   //place four
   if (guessOne[3] === theCode[3]) {
-    roundOneScoreFour.style = 'background-color: black';
+    scoreForRoundOne[3] = 'black';
   } else if (theCode.includes(guessOne[3])){
-    roundOneScoreFour.style = 'background-color: red';
+    scoreForRoundOne[3] = 'red';
+  }
+
+  scoreForRoundOne.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundOne[0] === 'black'){
+    roundOneScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundOne[0] === 'red') {
+    roundOneScoreOne .style = 'background-color: red';
+  } else {
+    roundOneScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundOne[1] === 'black'){
+    roundOneScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundOne[1] === 'red') {
+    roundOneScoreTwo .style = 'background-color: red';
+  } else {
+    roundOneScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundOne[2] === 'black'){
+    roundOneScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundOne[2] === 'red') {
+    roundOneScoreThree .style = 'background-color: red';
+  } else {
+    roundOneScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundOne[3] === 'black'){
+    roundOneScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundOne[3] === 'red') {
+    roundOneScoreFour .style = 'background-color: red'
+  } else {
+    roundOneScoreFour .style = 'background-color: none'
   }
 };
 
@@ -416,6 +505,10 @@ twoBtn.onclick = () => {
       roundThreePlaceOne.style = 'background-color: orange';
       guessThree[0] = 'orange'
     };
+    green.onclick = () => {
+      roundThreePlaceOne.style = 'background-color: lightgreen';
+      guessThree[0] = 'green'
+    };
   };
   //place two
   roundThreePlaceTwo.onclick = () => {
@@ -440,6 +533,10 @@ twoBtn.onclick = () => {
     orange.onclick = () => {
       roundThreePlaceTwo.style = 'background-color: orange';
       guessThree[1] = 'orange'
+    };
+    green.onclick = () => {
+      roundThreePlaceTwo.style = 'background-color: lightgreen';
+      guessThree[1] = 'green'
     };
   };
   //place three
@@ -466,6 +563,10 @@ twoBtn.onclick = () => {
       roundThreePlaceThree.style = 'background-color: orange';
       guessThree[2] = 'orange'
     };
+    green.onclick = () => {
+      roundThreePlaceThree.style = 'background-color: lightgreen';
+      guessThree[2] = 'green'
+    };
   };
   //place four
   roundThreePlaceFour.onclick = () => {
@@ -489,7 +590,11 @@ twoBtn.onclick = () => {
     };
     orange.onclick = () => {
       roundThreePlaceFour.style = 'background-color: orange';
-      guessThree[3] = 'orange`'
+      guessThree[3] = 'orange'
+    };
+    green.onclick = () => {
+      roundThreePlaceFour.style = 'background-color: lightgreen';
+      guessThree[3] = 'green'
     };
   };
 
@@ -499,27 +604,61 @@ twoBtn.onclick = () => {
   
   //place one
   if (guessTwo[0] === theCode[0]) {
-    roundTwoScoreOne.style = 'background-color: black';
+    scoreForRoundTwo[0] = 'black'
   } else if (theCode.includes(guessTwo[0])){
-    roundTwoScoreOne.style = 'background-color: red';
+    scoreForRoundTwo[0] = 'red'
   }
   //place two
   if (guessTwo[1] === theCode[1]) {
-    roundTwoScoreTwo.style = 'background-color: black';
+    scoreForRoundTwo[1] = 'black'
   } else if (theCode.includes(guessTwo[1])){
-    roundTwoScoreTwo.style = 'background-color: red';
+    scoreForRoundTwo[1] = 'red'
   }
   //place three
   if (guessTwo[2] === theCode[2]) {
-    roundTwoScoreThree.style = 'background-color: black';
+    scoreForRoundTwo[2] = 'black';
   } else if (theCode.includes(guessTwo[2])){
-    roundTwoScoreThree.style = 'background-color: red';
+    scoreForRoundTwo[2] = 'red';
   }
   //place four
   if (guessTwo[3] === theCode[3]) {
-    roundTwoScoreFour.style = 'background-color: black';
+    scoreForRoundTwo[3] = 'black';
   } else if (theCode.includes(guessTwo[3])){
-    roundTwoScoreFour.style = 'background-color: red';
+    scoreForRoundTwo[3] = 'red';
+  }
+
+  scoreForRoundTwo.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundTwo[0] === 'black'){
+    roundTwoScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundOne[0] === 'red') {
+    roundTwoScoreOne .style = 'background-color: red';
+  } else {
+    roundTwoScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundTwo[1] === 'black'){
+    roundTwoScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundOne[1] === 'red') {
+    roundTwoScoreTwo .style = 'background-color: red';
+  } else {
+    roundTwoScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundTwo[2] === 'black'){
+    roundTwoScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundOne[2] === 'red') {
+    roundTwoScoreThree .style = 'background-color: red';
+  } else {
+    roundTwoScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundTwo[3] === 'black'){
+    roundTwoScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundOne[3] === 'red') {
+    roundTwoScoreFour .style = 'background-color: red'
+  } else {
+    roundTwoScoreFour .style = 'background-color: none'
   }
 };
 
@@ -550,6 +689,10 @@ threeBtn.onclick = () => {
       roundFourPlaceOne.style = 'background-color: orange';
       guessFour[0] = 'orange';
     };
+    green.onclick = () => {
+      roundFourPlaceOne.style = 'background-color: lightgreen';
+      guessFour[0] = 'green';
+    };
   };
   //place two
   roundFourPlaceTwo.onclick = () => {
@@ -574,7 +717,10 @@ threeBtn.onclick = () => {
     orange.onclick = () => {
       roundFourPlaceTwo.style = 'background-color: orange';
       guessFour[1] = 'orange';
-
+    };
+    green.onclick = () => {
+      roundFourPlaceTwo.style = 'background-color: lightgreen';
+      guessFour[1] = 'green';
     };
   };
   //place three
@@ -601,6 +747,10 @@ threeBtn.onclick = () => {
       roundFourPlaceThree.style = 'background-color: orange';
       guessFour[2] = 'orange';
     };
+    green.onclick = () => {
+      roundFourPlaceThree.style = 'background-color: lightgreen';
+      guessFour[2] = 'green';
+    };
   };
   //place four
   roundFourPlaceFour.onclick = () => {
@@ -626,6 +776,10 @@ threeBtn.onclick = () => {
       roundFourPlaceFour.style = 'background-color: orange';
       guessFour[3] = 'orange';
     };
+    green.onclick = () => {
+      roundFourPlaceFour.style = 'background-color: lightgreen';
+      guessFour[3] = 'green';
+    };
   };
 
   threeBtn.style = 'display: none';
@@ -634,27 +788,61 @@ threeBtn.onclick = () => {
 
   //place one
   if (guessThree[0] === theCode[0]) {
-    roundThreeScoreOne.style = 'background-color: black';
+    scoreForRoundThree[0] = 'black';
   } else if (theCode.includes(guessThree[0])){
-    roundThreeScoreOne.style = 'background-color: red';
+    scoreForRoundThree[0] = 'red';
   }
   //place two
   if (guessThree[1] === theCode[1]) {
-    roundThreeScoreTwo.style = 'background-color: black';
+    scoreForRoundThree[1] = 'black';
   } else if (theCode.includes(guessThree[1])){
-    roundThreeScoreTwo.style = 'background-color: red';
+    scoreForRoundThree[1] = 'red';
   }
   //place three
   if (guessThree[2] === theCode[2]) {
-    roundThreeScoreThree.style = 'background-color: black';
+    scoreForRoundThree[2] = 'black';
   } else if (theCode.includes(guessThree[2])){
-    roundThreeScoreThree.style = 'background-color: red';
+    scoreForRoundThree[2] = 'red';
   }
   //place four
   if (guessThree[3] === theCode[3]) {
-    roundThreeScoreFour.style = 'background-color: black';
+    scoreForRoundThree[3] = 'black';
   } else if (theCode.includes(guessThree[3])){
-    roundThreeScoreFour.style = 'background-color: red';
+    scoreForRoundThree[3] = 'red';
+  }
+
+  scoreForRoundThree.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundThree[0] === 'black'){
+    roundThreeScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundThree[0] === 'red') {
+    roundThreeScoreOne .style = 'background-color: red';
+  } else {
+    roundThreeScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundThree[1] === 'black'){
+    roundThreeScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundThree[1] === 'red') {
+    roundThreeScoreTwo .style = 'background-color: red';
+  } else {
+    roundThreeScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundThree[2] === 'black'){
+    roundThreeScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundThree[2] === 'red') {
+    roundThreeScoreThree .style = 'background-color: red';
+  } else {
+    roundThreeScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundThree[3] === 'black'){
+    roundThreeScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundThree[3] === 'red') {
+    roundThreeScoreFour .style = 'background-color: red'
+  } else {
+    roundThreeScoreFour .style = 'background-color: none'
   }
 };
 
@@ -685,6 +873,10 @@ fourBtn.onclick = () => {
       roundFivePlaceOne.style = 'background-color: orange';
       guessFive[0] = 'orange';
     };
+    green.onclick = () => {
+      roundFivePlaceOne.style = 'background-color: lightgreen';
+      guessFive[0] = 'green';
+    };
   };
   //place two
   roundFivePlaceTwo.onclick = () => {
@@ -709,6 +901,10 @@ fourBtn.onclick = () => {
     orange.onclick = () => {
       roundFivePlaceTwo.style = 'background-color: orange';
       guessFive[1] = 'orange';
+    };
+    green.onclick = () => {
+      roundFivePlaceTwo.style = 'background-color: lightgreen';
+      guessFive[1] = 'green';
     };
   };
   //place three
@@ -735,6 +931,10 @@ fourBtn.onclick = () => {
       roundFivePlaceThree.style = 'background-color: orange';
       guessFive[2] = 'orange';
     };
+    green.onclick = () => {
+      roundFivePlaceThree.style = 'background-color: lightgreen';
+      guessFive[2] = 'green';
+    };
   };
   //place four
   roundFivePlaceFour.onclick = () => {
@@ -756,10 +956,13 @@ fourBtn.onclick = () => {
       roundFivePlaceFour.style = 'background-color: grey';
       guessFive[3] = 'grey';
     };
-
     orange.onclick = () => {
       roundFivePlaceFour.style = 'background-color: orange';
       guessFive[3] = 'orange';
+    };
+    green.onclick = () => {
+      roundFivePlaceFour.style = 'background-color: lightgreen';
+      guessFive[3] = 'green';
     };
   };
 
@@ -769,27 +972,61 @@ fourBtn.onclick = () => {
 
   //place one
   if (guessFour[0] === theCode[0]) {
-    roundFourScoreOne.style = 'background-color: black';
+    scoreForRoundFour[0] = 'black';
   } else if (theCode.includes(guessFour[0])){
-    roundFourScoreOne.style = 'background-color: red';
+    scoreForRoundFour[0] = 'red';
   }
   //place two
   if (guessFour[1] === theCode[1]) {
-    roundFourScoreTwo.style = 'background-color: black';
+    scoreForRoundFour[1] = 'black';
   } else if (theCode.includes(guessFour[1])){
-    roundFourScoreTwo.style = 'background-color: red';
+    scoreForRoundFour[1] = 'red';
   }
   //place three
   if (guessFour[2] === theCode[2]) {
-    roundFourScoreThree.style = 'background-color: black';
+    scoreForRoundFour[2] = 'black';
   } else if (theCode.includes(guessFour[2])){
-    roundFourScoreThree.style = 'background-color: red';
+    scoreForRoundFour[2] = 'red';
   }
   //place four
   if (guessFour[3] === theCode[3]) {
-    roundFourScoreFour.style = 'background-color: black';
+    scoreForRoundFour[3] = 'black';
   } else if (theCode.includes(guessFour[3])){
-    roundFourScoreFour.style = 'background-color: red';
+    scoreForRoundFour[3] = 'red';
+  }
+
+  scoreForRoundFour.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundFour[0] === 'black'){
+    roundFourScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundFour[0] === 'red') {
+    roundFourScoreOne .style = 'background-color: red';
+  } else {
+    roundFourScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundFour[1] === 'black'){
+    roundFourScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundFour[1] === 'red') {
+    roundFourScoreTwo .style = 'background-color: red';
+  } else {
+    roundFourScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundFour[2] === 'black'){
+    roundFourScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundFour[2] === 'red') {
+    roundFourScoreThree .style = 'background-color: red';
+  } else {
+    roundFourScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundFour[3] === 'black'){
+    roundFourScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundFour[3] === 'red') {
+    roundFourScoreFour .style = 'background-color: red'
+  } else {
+    roundFourScoreFour .style = 'background-color: none'
   }
 };
 
@@ -823,6 +1060,10 @@ fiveBtn.onclick = () => {
       roundSixPlaceOne.style = 'background-color: orange';
       guessSix[0] = 'orange';
     };
+    green.onclick = () => {
+      roundSixPlaceOne.style = 'background-color: lightgreen';
+      guessSix[0] = 'green';
+    };
   };
   //place two
   roundSixPlaceTwo.onclick = () => {
@@ -847,6 +1088,10 @@ fiveBtn.onclick = () => {
     orange.onclick = () => {
       roundSixPlaceTwo.style = 'background-color: orange';
       guessSix[1] = 'orange';
+    };
+    green.onclick = () => {
+      roundSixPlaceTwo.style = 'background-color: lightgreen';
+      guessSix[1] = 'green';
     };
   };
   //place three
@@ -873,6 +1118,10 @@ fiveBtn.onclick = () => {
       roundSixPlaceThree.style = 'background-color: orange';
       guessSix[2] = 'orange';
     };
+    green.onclick = () => {
+      roundSixPlaceThree.style = 'background-color: lightgreen';
+      guessSix[2] = 'green';
+    };
   };
   //place four
   roundSixPlaceFour.onclick = () => {
@@ -898,6 +1147,10 @@ fiveBtn.onclick = () => {
       roundSixPlaceFour.style = 'background-color: orange';
       guessSix[3] = 'orange';
     };
+    green.onclick = () => {
+      roundSixPlaceFour.style = 'background-color: lightgreen';
+      guessSix[3] = 'green';
+    };
   };
 
   fiveBtn.style = 'display: none';
@@ -906,27 +1159,61 @@ fiveBtn.onclick = () => {
 
   //place one
   if (guessFive[0] === theCode[0]) {
-    roundFiveScoreOne.style = 'background-color: black';
+    scoreForRoundFive[0] = 'black';
   } else if (theCode.includes(guessFive[0])){
-    roundFiveScoreOne.style = 'background-color: red';
+    scoreForRoundFive[0] = 'red';
   }
   //place two
   if (guessFive[1] === theCode[1]) {
-    roundFiveScoreTwo.style = 'background-color: black';
+    scoreForRoundFive[1] = 'black';
   } else if (theCode.includes(guessFive[1])){
-    roundFiveScoreTwo.style = 'background-color: red';
+    scoreForRoundFive[1] = 'red';
   }
   //place three
   if (guessFive[2] === theCode[2]) {
-    roundFiveScoreThree.style = 'background-color: black';
+    scoreForRoundFive[2] = 'black';
   } else if (theCode.includes(guessFive[2])){
-    roundFiveScoreThree.style = 'background-color: red';
+    scoreForRoundFive[2] = 'red';
   }
   //place four
   if (guessFive[3] === theCode[3]) {
-    roundFiveScoreFour.style = 'background-color: black';
+    scoreForRoundFive[3] = 'black';
   } else if (theCode.includes(guessFive[3])){
-    roundFiveScoreFour.style = 'background-color: red';
+    scoreForRoundFive[3] = 'red';
+  }
+
+  scoreForRoundFive.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundFive[0] === 'black'){
+    roundFiveScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundFive[0] === 'red') {
+    roundFiveScoreOne .style = 'background-color: red';
+  } else {
+    roundFiveScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundFive[1] === 'black'){
+    roundFiveScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundFive[1] === 'red') {
+    roundFiveScoreTwo .style = 'background-color: red';
+  } else {
+    roundFiveScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundFive[2] === 'black'){
+    roundFiveScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundFive[2] === 'red') {
+    roundFiveScoreThree .style = 'background-color: red';
+  } else {
+    roundFiveScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundFive[3] === 'black'){
+    roundFiveScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundFive[3] === 'red') {
+    roundFiveScoreFour .style = 'background-color: red'
+  } else {
+    roundFiveScoreFour .style = 'background-color: none'
   }
 };
 
@@ -957,6 +1244,10 @@ sixBtn.onclick = () => {
       roundSevenPlaceOne.style = 'background-color: orange';
       guessSeven[0] = 'orange';
     };
+    green.onclick = () => {
+      roundSevenPlaceOne.style = 'background-color: lightgreen';
+      guessSeven[0] = 'green';
+    };
   };
   //place two
   roundSevenPlaceTwo.onclick = () => {
@@ -980,6 +1271,10 @@ sixBtn.onclick = () => {
     orange.onclick = () => {
       roundSevenPlaceTwo.style = 'background-color: orange';
       guessSeven[1] = 'orange';
+    };
+    green.onclick = () => {
+      roundSevenPlaceTwo.style = 'background-color: lightgreen';
+      guessSeven[1] = 'green';
     };
   };
   //place three
@@ -1006,6 +1301,10 @@ sixBtn.onclick = () => {
       roundSevenPlaceThree.style = 'background-color: orange';
       guessSeven[2] = 'orange';
     };
+    green.onclick = () => {
+      roundSevenPlaceThree.style = 'background-color: lightgreen';
+      guessSeven[2] = 'green';
+    };
   };
   //place four
   roundSevenPlaceFour.onclick = () => {
@@ -1031,6 +1330,10 @@ sixBtn.onclick = () => {
       roundSevenPlaceFour.style = 'background-color: orange';
       guessSeven[3] = 'orange';
     };
+    green.onclick = () => {
+      roundSevenPlaceFour.style = 'background-color: lightgreen';
+      guessSeven[3] = 'green';
+    };
   };
 
   sixBtn.style = 'display: none';
@@ -1039,32 +1342,66 @@ sixBtn.onclick = () => {
 
   //place one
   if (guessSix[0] === theCode[0]) {
-    roundSixScoreOne.style = 'background-color: black';
+    scoreForRoundSix[0] = 'black';
   } else if (theCode.includes(guessSix[0])){
-    roundSixScoreOne.style = 'background-color: red';
+    scoreForRoundSix[0] = 'red';
   }
   //place two
   if (guessSix[1] === theCode[1]) {
-    roundSixScoreTwo.style = 'background-color: black';
+    scoreForRoundSix[1] = 'black';
   } else if (theCode.includes(guessSix[1])){
-    roundSixScoreTwo.style = 'background-color: red';
+    scoreForRoundSix[1] = 'red';
   }
   //place three
   if (guessSix[2] === theCode[2]) {
-    roundSixScoreThree.style = 'background-color: black';
+    scoreForRoundSix[2] = 'black';
   } else if (theCode.includes(guessSix[2])){
-    roundSixScoreThree.style = 'background-color: red';
+    scoreForRoundSix[2] = 'red';
   }
   //place four
   if (guessSix[3] === theCode[3]) {
-    roundSixScoreFour.style = 'background-color: black';
+    scoreForRoundSix[3] = 'black';
   } else if (theCode.includes(guessSix[3])){
-    roundSixScoreFour.style = 'background-color: red';
+    scoreForRoundSix[3] = 'red';
   }
+
+  scoreForRoundSix.sort((a, b) => 0.5 - Math.random());
+
+if (scoreForRoundSix[0] === 'black'){
+  roundSixScoreOne .style = 'background-color: black';
+} else if (scoreForRoundSix[0] === 'red') {
+  roundSixScoreOne .style = 'background-color: red';
+} else {
+  roundSixScoreOne .style = 'background-color: none';
+}
+
+if (scoreForRoundSix[1] === 'black'){
+  roundSixScoreTwo .style = 'background-color: black';
+} else if (scoreForRoundSix[1] === 'red') {
+  roundSixScoreTwo .style = 'background-color: red';
+} else {
+  roundSixScoreTwo .style = 'background-color: none';
+}
+
+if (scoreForRoundSix[2] === 'black'){
+  roundSixScoreThree .style = 'background-color: black';
+} else if (scoreForRoundSix[2] === 'red') {
+  roundSixScoreThree .style = 'background-color: red';
+} else {
+  roundSixScoreThree .style = 'background-color: none'
+}
+
+if (scoreForRoundSix[3] === 'black'){
+  roundSixScoreFour .style = 'background-color: black'
+} else if (scoreForRoundSix[3] === 'red') {
+  roundSixcoreFour .style = 'background-color: red'
+} else {
+  roundSixScoreFour .style = 'background-color: none'
+}
 };
 
-//fix bugssss
-//place one has a bug
+///stoped here
+
 //round seven
 sevenBtn.onclick = () => {
 
@@ -1095,6 +1432,10 @@ sevenBtn.onclick = () => {
       roundEightPlaceOne.style = 'background-color: orange';
       guessEight[0] = 'orange';
     };
+    green.onclick = () => {
+      roundEightPlaceOne.style = 'background-color: lightgreen';
+      guessEight[0] = 'green';
+    };
   };
   //place two
   roundEightPlaceTwo.onclick = () => {
@@ -1119,6 +1460,10 @@ sevenBtn.onclick = () => {
     orange.onclick = () => {
       roundEightPlaceTwo.style = 'background-color: orange';
       guessEight[1] = 'orange';
+    };
+    green.onclick = () => {
+      roundEightPlaceTwo.style = 'background-color: lightgreen';
+      guessEight[1] = 'green';
     };
   };
   //place three
@@ -1145,6 +1490,10 @@ sevenBtn.onclick = () => {
       roundEightPlaceThree.style = 'background-color: orange';
       guessEight[2] = 'orange';
     };
+    green.onclick = () => {
+      roundEightPlaceThree.style = 'background-color: lightgreen';
+      guessEight[2] = 'green';
+    };
   };
   //place four
   roundEightPlaceFour.onclick = () => {
@@ -1170,6 +1519,10 @@ sevenBtn.onclick = () => {
       roundEightPlaceFour.style = 'background-color: orange';
       guessEight[3] = 'orange';
     };
+    green.onclick = () => {
+      roundEightPlaceFour.style = 'background-color: lightgreen';
+      guessEight[3] = 'green';
+    };
   };
 
   sevenBtn.style = 'display: none';
@@ -1178,27 +1531,61 @@ sevenBtn.onclick = () => {
 
   //place one
   if (guessSeven[0] === theCode[0]) {
-    roundSevenScoreOne.style = 'background-color: black';
+    scoreForRoundSeven[0] = 'black';
   } else if (theCode.includes(guessSeven[0])){
-    roundSevenScoreOne.style = 'background-color: red';
+    scoreForRoundSeven[0] = 'red';
   }
   //place two
   if (guessSeven[1] === theCode[1]) {
-    roundSevenScoreTwo.style = 'background-color: black';
+    scoreForRoundSeven[1] = 'black';
   } else if (theCode.includes(guessSeven[1])){
-    roundSevenScoreTwo.style = 'background-color: red';
+    scoreForRoundSeven[1] = 'red';
   }
   //place three
   if (guessSeven[2] === theCode[2]) {
-    roundSevenScoreThree.style = 'background-color: black';
+    scoreForRoundSeven[2] = 'black';
   } else if (theCode.includes(guessSeven[2])){
-    roundSevenScoreThree.style = 'background-color: red';
+    scoreForRoundSix[2] = 'red';
   }
   //place four
   if (guessSeven[3] === theCode[3]) {
-    roundSevenScoreFour.style = 'background-color: black';
+    scoreForRoundSeven[3] = 'black';
   } else if (theCode.includes(guessSeven[3])){
-    roundSevenScoreFour.style = 'background-color: red';
+    scoreForRoundSeven[3] = 'red';
+  }
+
+  scoreForRoundSeven.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundSeven[0] === 'black'){
+    roundSevenScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundSeven[0] === 'red') {
+    roundSevenScoreOne .style = 'background-color: red';
+  } else {
+    roundSevenScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundSeven[1] === 'black'){
+    roundSevenScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundSeven[1] === 'red') {
+    roundSevenScoreTwo .style = 'background-color: red';
+  } else {
+    roundSevenScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundSeven[2] === 'black'){
+    roundSevenScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundSeven[2] === 'red') {
+    roundSevenScoreThree .style = 'background-color: red';
+  } else {
+    roundSevenScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundSeven[3] === 'black'){
+    roundSevenScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundSeven[3] === 'red') {
+    roundSevenScoreFour .style = 'background-color: red'
+  } else {
+    roundSevenScoreFour .style = 'background-color: none'
   }
 };
 
@@ -1228,6 +1615,10 @@ eightBtn.onclick = () => {
       roundNinePlaceOne.style = 'background-color: orange';
       guessNine[0] = 'orange';
     };
+    green.onclick = () => {
+      roundNinePlaceOne.style = 'background-color: lightgreen';
+      guessNine[0] = 'green';
+    };
   };
   //place two
   roundNinePlaceTwo.onclick = () => {
@@ -1246,12 +1637,16 @@ eightBtn.onclick = () => {
       guessNine[1] = 'yellow';
     };
     grey.onclick = () => {
-      roundNinePlaceTwo.style = 'background-color: grey';
+      roundNinePlaceTwo.style = 'background-color: lightgrey';
       guessNine[1] = 'grey';
     };
     orange.onclick = () => {
       roundNinePlaceTwo.style = 'background-color: orange';
       guessNine[1] = 'orange';
+    };
+    green.onclick = () => {
+      roundNinePlaceTwo.style = 'background-color: lightgreen';
+      guessNine[1] = 'green';
     };
   };
   //place three
@@ -1278,6 +1673,10 @@ eightBtn.onclick = () => {
       roundNinePlaceThree.style = 'background-color: orange';
       guessNine[2] = 'orange';
     };
+    green.onclick = () => {
+      roundNinePlaceThree.style = 'background-color: lightgreen';
+      guessNine[2] = 'green';
+    };
   };
   //place four
   roundNinePlaceFour.onclick = () => {
@@ -1303,6 +1702,10 @@ eightBtn.onclick = () => {
       roundNinePlaceFour.style = 'background-color: orange';
       guessNine[3] = 'orange';
     };
+    green.onclick = () => {
+      roundNinePlaceFour.style = 'background-color: lightgreen';
+      guessNine[3] = 'green';
+    };
   };
 
   eightBtn.style = 'display: none';
@@ -1311,27 +1714,61 @@ eightBtn.onclick = () => {
 
   //place one
   if (guessEight[0] === theCode[0]) {
-    roundEightScoreOne.style = 'background-color: black';
+    scoreForRoundEight[0] = 'black';
   } else if (theCode.includes(guessEight[0])){
-    roundEightScoreOne.style = 'background-color: red';
+    scoreForRoundEight[0] = 'red';
   }
   //place two
   if (guessEight[1] === theCode[1]) {
-    roundEightScoreTwo.style = 'background-color: black';
+    scoreForRoundEight[1] = 'black';
   } else if (theCode.includes(guessEight[1])){
-    roundEightScoreTwo.style = 'background-color: red';
+    scoreForRoundEight[1] = 'red';
   }
   //place three
   if (guessEight[2] === theCode[2]) {
-    roundEightScoreThree.style = 'background-color: black';
+    scoreForRoundEight[2] = 'black';
   } else if (theCode.includes(guessEight[2])){
-    roundEightScoreThree.style = 'background-color: red';
+    scoreForRoundEight[2] = 'red';
   }
   //place four
   if (guessEight[3] === theCode[3]) {
-    roundEightScoreFour.style = 'background-color: black';
+    scoreForRoundEight[3] = 'black';
   } else if (theCode.includes(guessEight[3])){
-    roundEightScoreFour.style = 'background-color: red';
+    scoreForRoundEight[3] = 'red';
+  }
+
+  scoreForRoundEight.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundEight[0] === 'black'){
+    roundEightScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundEight[0] === 'red') {
+    roundEightScoreOne .style = 'background-color: red';
+  } else {
+    roundEightScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundEight[1] === 'black'){
+    roundEightScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundEight[1] === 'red') {
+    roundEightScoreTwo .style = 'background-color: red';
+  } else {
+    roundEightScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundEight[2] === 'black'){
+    roundEightScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundEight[2] === 'red') {
+    roundEightScoreThree .style = 'background-color: red';
+  } else {
+    roundEightScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundEight[3] === 'black'){
+    roundEightScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundEight[3] === 'red') {
+    roundEightScoreFour .style = 'background-color: red'
+  } else {
+    roundEightScoreFour .style = 'background-color: none'
   }
 };
 
@@ -1362,6 +1799,10 @@ nineBtn.onclick = () => {
       roundTenPlaceOne.style = 'background-color: orange';
       guessTen[0] = 'orange';
     };
+    green.onclick = () => {
+      roundTenPlaceOne.style = 'background-color: lightgreen';
+      guessTen[0] = 'green';
+    };
   };
   //place two
   roundTenPlaceTwo.onclick = () => {
@@ -1387,6 +1828,10 @@ nineBtn.onclick = () => {
       roundTenPlaceTwo.style = 'background-color: orange';
       guessTen[1] = 'orange';
     };
+    green.onclick = () => {
+      roundTenPlaceTwo.style = 'background-color: lightgreen';
+      guessTen[1] = 'green';
+    };
   };
   //place three
   roundTenPlaceThree.onclick = () => {
@@ -1411,6 +1856,10 @@ nineBtn.onclick = () => {
     orange.onclick = () => {
       roundTenPlaceThree.style = 'background-color: orange';
       guessTen[2] = 'orange';
+    };
+    green.onclick = () => {
+      roundTenPlaceThree.style = 'background-color: lightgreen';
+      guessTen[2] = 'green';
     };
   };
   //place four
@@ -1437,6 +1886,10 @@ nineBtn.onclick = () => {
       roundTenPlaceFour.style = 'background-color: orange';
       guessTen[3] = 'orange';
     };
+    green.onclick = () => {
+      roundTenPlaceFour.style = 'background-color: lightgreen';
+      guessTen[3] = 'green';
+    };
   };
 
   nineBtn.style = 'display: none';
@@ -1445,31 +1898,65 @@ nineBtn.onclick = () => {
 
   //place one
   if (guessNine[0] === theCode[0]) {
-    roundNineScoreOne.style = 'background-color: black';
+    scoreForRoundNine[0] = 'black';
   } else if (theCode.includes(guessNine[0])){
-    roundNineScoreOne.style = 'background-color: red';
+    scoreForRoundNine[0] = 'red';
   }
   //place two
   if (guessNine[1] === theCode[1]) {
-    roundNineScoreTwo.style = 'background-color: black';
+    scoreForRoundNine[1] = 'black';
   } else if (theCode.includes(guessNine[1])){
-    roundNineScoreTwo.style = 'background-color: red';
+    scoreForRoundNine[1] = 'red';
   }
   //place three
   if (guessNine[2] === theCode[2]) {
-    roundNineScoreThree.style = 'background-color: black';
+    scoreForRoundNine[2] = 'black';
   } else if (theCode.includes(guessNine[2])){
-    roundNineScoreThree.style = 'background-color: red';
+    scoreForRoundNine[2] = 'red';
   }
   //place four
   if (guessNine[3] === theCode[3]) {
-    roundNineScoreFour.style = 'background-color: black';
+    scoreForRoundNine[3] = 'black';
   } else if (theCode.includes(guessNine[3])){
-    roundNineScoreFour.style = 'background-color: red';
+    scoreForRoundNine[3] = 'red';
+  }
+
+  scoreForRoundNine.sort((a, b) => 0.5 - Math.random());
+
+  if (scoreForRoundNine[0] === 'black'){
+    roundNineScoreOne .style = 'background-color: black';
+  } else if (scoreForRoundNine[0] === 'red') {
+    roundNineScoreOne .style = 'background-color: red';
+  } else {
+    roundNineScoreOne .style = 'background-color: none';
+  }
+
+  if (scoreForRoundNine[1] === 'black'){
+    roundNineScoreTwo .style = 'background-color: black';
+  } else if (scoreForRoundNine[1] === 'red') {
+    roundNineScoreTwo .style = 'background-color: red';
+  } else {
+    roundNineScoreTwo .style = 'background-color: none';
+  }
+
+  if (scoreForRoundNine[2] === 'black'){
+    roundNineScoreThree .style = 'background-color: black';
+  } else if (scoreForRoundNine[2] === 'red') {
+    roundNineScoreThree .style = 'background-color: red';
+  } else {
+    roundNineScoreThree .style = 'background-color: none'
+  }
+
+  if (scoreForRoundNine[3] === 'black'){
+    roundNineScoreFour .style = 'background-color: black'
+  } else if (scoreForRoundNine[3] === 'red') {
+    roundNineScoreFour .style = 'background-color: red'
+  } else {
+    roundNineScoreFour .style = 'background-color: none'
   }
 };
 
-//logic round ten
+//round ten
 tenBtn.onclick = () => {
 
   //place one
@@ -1496,6 +1983,10 @@ tenBtn.onclick = () => {
       roundTenPlaceOne.style = 'background-color: orange';
       guessTen[0] = 'orange';
     };
+    green.onclick = () => {
+      roundTenPlaceOne.style = 'background-color: lightgreen';
+      guessTen[0] = 'green';
+    };
   };
   //place two
   roundTenPlaceTwo.onclick = () => {
@@ -1520,6 +2011,10 @@ tenBtn.onclick = () => {
     orange.onclick = () => {
       roundTenPlaceTwo.style = 'background-color: orange';
       guessTen[1] = 'orange';
+    };
+    green.onclick = () => {
+      roundTenPlaceTwo.style = 'background-color: lightgreen';
+      guessTen[1] = 'green';
     };
   };
   //place three
@@ -1546,6 +2041,10 @@ tenBtn.onclick = () => {
       roundTenPlaceThree.style = 'background-color: orange';
       guessTen[2] = 'orange';
     };
+    green.onclick = () => {
+      roundTenPlaceThree.style = 'background-color: lightgreen';
+      guessTen[2] = 'green';
+    };
   };
   //place four
   tenBtn.style = 'display: none';
@@ -1553,52 +2052,62 @@ tenBtn.onclick = () => {
 
   //place one
   if (guessTen[0] === theCode[0]) {
-    roundTenScoreOne.style = 'background-color: black';
+    scoreForRoundTen[0] = 'black';
   } else if (theCode.includes(guessTen[0])){
-    roundTenScoreOne.style = 'background-color: red';
+    scoreForRoundTen[0] = 'red';
   }
   //place two
   if (guessTen[1] === theCode[1]) {
-    roundTenScoreTwo.style = 'background-color: black';
+    scoreForRoundTen[1] = 'black';
   } else if (theCode.includes(guessTen[1])){
-    roundTenScoreTwo.style = 'background-color: red';
+    scoreForRoundTen[1] = 'red';
   }
   //place three
   if (guessTen[2] === theCode[2]) {
-    roundTenScoreThree.style = 'background-color: black';
+    scoreForRoundTen[2] = 'black';
   } else if (theCode.includes(guessTen[2])){
-    roundTenScoreThree.style = 'background-color: red';
+    scoreForRoundTen[2] = 'red';
   }
   //place four
   if (guessTen[3] === theCode[3]) {
-    roundTenScoreFour.style = 'background-color: black';
+    scoreForRoundTen[3] = 'black';
   } else if (theCode.includes(guessTen[3])){
-    roundTenScoreFour.style = 'background-color: red';
-  }
+    scoreForRoundTen[3] = 'red';
+  } 
 };
 
 
+///// ends here
+scoreForRoundFive.sort((a, b) => 0.5 - Math.random());
 
+if (scoreForRoundFive[0] === 'black'){
+  roundFiveScoreOne .style = 'background-color: black';
+} else if (scoreForRoundFive[0] === 'red') {
+  roundFiveScoreOne .style = 'background-color: red';
+} else {
+  roundFiveScoreOne .style = 'background-color: none';
+}
 
-// red.onclick = () => {
-//   roundTenPlaceFour.style = 'background-color: red';
-//   guessTen[3] = 'red';
-//   console.log('jello')
-// };
-// blue.onclick = () => {
-//   roundTenPlaceFour.style = 'background-color: blue';
-//   guessTen[3] = 'blue';
-// };
-// yellow.onclick = () => {
-//   roundTenPlaceFour.style = 'background-color: yellow';
-//   guessTen[3] = 'yellow';
-// };
-// grey.onclick = () => {
-//   roundTenPlaceFour.style = 'background-color: grey';
-//   guessTen[3] = 'grey';
-// };
-// orange.onclick = () => {
-//   roundTenPlaceFour.style = 'background-color: orange';
-//   guessTen[3] = 'orange';
-// };
-// };
+if (scoreForRoundFive[1] === 'black'){
+  roundFiveScoreTwo .style = 'background-color: black';
+} else if (scoreForRoundFive[1] === 'red') {
+  roundFiveScoreTwo .style = 'background-color: red';
+} else {
+  roundFiveScoreTwo .style = 'background-color: none';
+}
+
+if (scoreForRoundFive[2] === 'black'){
+  roundFiveScoreThree .style = 'background-color: black';
+} else if (scoreForRoundFive[2] === 'red') {
+  roundFiveScoreThree .style = 'background-color: red';
+} else {
+  roundFiveScoreThree .style = 'background-color: none'
+}
+
+if (scoreForRoundFive[3] === 'black'){
+  roundFiveScoreFour .style = 'background-color: black'
+} else if (scoreForRoundFive[3] === 'red') {
+  roundFiveScoreFour .style = 'background-color: red'
+} else {
+  roundFiveScoreFour .style = 'background-color: none'
+}
