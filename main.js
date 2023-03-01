@@ -3,7 +3,7 @@
 //the code
 let theCode = ['red', 'blue', 'yellow', 'grey', 'orange', 'green'];
 
-theCode.sort((a, b) => 0.5 - Math.random());
+// theCode.sort((a, b) => 0.5 - Math.random());
 
 theCode.pop() 
 theCode.pop()
