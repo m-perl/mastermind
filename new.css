@@ -35,7 +35,7 @@
 .board {
   margin-top: 10px;
   background-color: rgb(132, 132, 244);
-  border-radius: 50px;
+  border-radius: 5px;
   width: 280px;
   padding: 10px;
 }
@@ -51,7 +51,7 @@
 .board .round .guess .place {
   width: 42px;
   height: 42px;
-  border-radius: 50px;
+  border-radius: 5px;
   margin: 0 5px;
   background-color: rgb(237, 237, 237);
 }
@@ -71,14 +71,14 @@
   margin-top: 10px;
   width: 70px;
   border: solid 1px grey;
-  border-radius: 50px;
+  border-radius: 5px;
   background-color: rgb(132, 132, 244);
 }
 .colors .pick {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
-  border: solid 1px rgb(22, 22, 255);
+  border-radius: 5px;
+  border: solid 2px rgb(22, 22, 255);
   margin: auto;
   margin: 20px auto;
 }
@@ -116,4 +116,39 @@ footer {
 }
 footer a {
   color: black;
+}
+
+.alert {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: darkslateblue;
+}
+.alert div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.alert div h1 {
+  color: lightgrey;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26.3px;
+  text-align: center;
+}
+.alert div button {
+  display: block;
+  margin: auto;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  font-size: 19px;
+}
+.alert div button a {
+  color: darkslateblue;
+  text-decoration: none;
 }/*# sourceMappingURL=new.css.map */

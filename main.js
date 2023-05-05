@@ -3,7 +3,7 @@
 //the code
 let theCode = ['red', 'blue', 'yellow', 'grey', 'orange', 'green'];
 
-// theCode.sort((a, b) => 0.5 - Math.random());
+theCode.sort((a, b) => 0.5 - Math.random());
 
 theCode.pop() 
 theCode.pop()
@@ -473,7 +473,7 @@ oneBtn.onclick = () => {
   }
 
   if (scoreForRoundOne[0], scoreForRoundOne[1], scoreForRoundOne[2], scoreForRoundOne[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -661,7 +661,7 @@ twoBtn.onclick = () => {
   }
 
   if (scoreForRoundTwo[0], scoreForRoundTwo[1], scoreForRoundTwo[2], scoreForRoundTwo[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -849,7 +849,7 @@ threeBtn.onclick = () => {
   }
 
   if (scoreForRoundThree[0], scoreForRoundThree[1], scoreForRoundThree[2], scoreForRoundThree[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -1037,7 +1037,7 @@ fourBtn.onclick = () => {
   }
 
   if (scoreForRoundFour[0], scoreForRoundFour[1], scoreForRoundFour[2], scoreForRoundFour[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -1228,7 +1228,7 @@ fiveBtn.onclick = () => {
   }
 
   if (scoreForRoundFive[0], scoreForRoundFive[1], scoreForRoundFive[2], scoreForRoundFive[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -1415,7 +1415,7 @@ sixBtn.onclick = () => {
   }
 
   if (scoreForRoundSix[0], scoreForRoundSix[1], scoreForRoundSix[2], scoreForRoundSix[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -1606,7 +1606,7 @@ sevenBtn.onclick = () => {
   }
   
   if (scoreForRoundSeven[0], scoreForRoundSeven[1], scoreForRoundSeven[2], scoreForRoundSeven[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -1793,7 +1793,7 @@ eightBtn.onclick = () => {
   }
 
   if (scoreForRoundEight[0], scoreForRoundEight[1], scoreForRoundEight[2], scoreForRoundEight[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -1981,7 +1981,7 @@ nineBtn.onclick = () => {
   }
 
   if (scoreForRoundNine[0], scoreForRoundNine[1], scoreForRoundNine[2], scoreForRoundNine[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
@@ -2051,7 +2051,7 @@ tenBtn.onclick = () => {
   }
 
   if (scoreForRoundTen[0], scoreForRoundTen[1], scoreForRoundTen[2], scoreForRoundTen[3] === 'black'){
-    alert('You Won!!!')
+    document.querySelector('.alert') .style = 'display: block'
   }
 };
 
